@@ -1,0 +1,95 @@
+/* ----------Color Scheme---------- */
+/*
+Nav Colors
+Purple: #65286B;
+Blue: #0068E8;
+Green: #58AD17;
+Yellow: #FFD014;
+Orange: #FF8D00;
+Red: #C72702;
+
+
+*/
+
+body {
+
+}
+
+header {
+  height: 100px;
+  border: solid white 2px;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 3%;
+}
+
+nav {
+
+}
+
+nav:after {
+
+}
+
+nav:after, nav:before {
+
+}
+
+.nav-button {
+  border: solid white 3px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 1.5%;
+/*  height: 25px;*/
+}
+
+.nav-button:hover {
+  background-color: white;
+  border: solid black 3px;
+}
+
+.nav-button a {
+  color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.purple {
+  background-color: #65286B;
+}
+
+.blue {
+  background-color: #0068E8;
+}
+
+.green {
+  background-color: #58AD17;
+}
+
+.yellow {
+  background-color: #FFD014;
+}
+
+.orange {
+  background-color: #FF8D00;
+}
+
+.red {
+  background-color: #C72702;
+}
+
+.grey {
+  background-color: #6E7476;
+}
+
+.suggestion-heading {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
