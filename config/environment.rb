@@ -18,6 +18,9 @@ require 'logger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
+require 'twitter'
+require 'dotenv'
+
 require 'erb'
 
 # Some helper constants for path-centric logic
