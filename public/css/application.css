@@ -93,3 +93,8 @@ nav:after, nav:before {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
 }
+
+.twitter-info-text {
+  font-size: 1em;
+  text-align: center;
+}

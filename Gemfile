@@ -20,6 +20,7 @@ gem 'shotgun'
 gem 'rspec'
 
 gem 'dotenv'
+gem 'twitter'
 
 group :test do
   gem 'shoulda-matchers'

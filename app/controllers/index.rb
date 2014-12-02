@@ -1,6 +1,12 @@
+
 get '/' do
   # Look in app/views/index.erb
   erb :index
+end
+
+get '/tweet_search' do
+  client = TwitterApi.set_client
+  TwitterApi.quick_search(client)
 end
 
 post '/add_todo' do
