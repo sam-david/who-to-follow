@@ -107,7 +107,6 @@ module TwitterApi
       user_hash[:image_url] = tweet["user"]["profile_image_url"]
 
       all_users << user_hash
-      p index + 1
     end
     filter_top_users(all_users)
   end
