@@ -3,7 +3,7 @@ class CreateTweetsTable < ActiveRecord::Migration
     create_table :tweets do |t|
       t.string :message
       t.string :hashtags
-      t.string :type
+      t.string :status
       t.references :user
       t.references :category
 

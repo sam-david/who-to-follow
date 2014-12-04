@@ -1,12 +1,4 @@
 
-# env gem. heroku config --help
-# require dotenv
-# ENV["Twitter_key"]
-# git ignore the .env file
-# entities for twitter earch
-# user .where instead of .find
-# load 'twitter_config.rb'
-
 module TwitterApi
 
   def self.search_category(category)
@@ -130,8 +122,7 @@ module TwitterApi
     top_users.each do |user|
     current_user = User.create(name: user[:name], screen_name: user[:screen_name], image_url: user[:image_url], followers: user[:followers_count], following: user[:following_count], statuses_count: user[:statuses_count])
     category = Category.where(name: category_name).first
-    p category
-    Tweet.create(message: user[:message], hashtags: user[:hashtags], user_id: current_user.id, category_id: category.id)
+    Tweet.create(message: user[:message], hashtags: user[:hashtags], status: user[:type], user_id: current_user.id, category_id: category.id)
     end
   end
 

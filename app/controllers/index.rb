@@ -8,7 +8,8 @@ get '/tweets/search/:category_name' do
 
   top_users = TwitterApi.search_category(params[:category_name])
   TwitterApi.save_users_to_database(top_users, params[:category_name])
-
+  category = Category.where(name: params[:category_name]).first
+  @twitter_users = User.where(categories: category.id)
   erb :index
 end
 
