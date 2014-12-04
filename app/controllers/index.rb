@@ -1,22 +1,16 @@
 
 get '/' do
-  # Look in app/views/index.erb
   @twitter_users = []
   erb :index
 end
 
 get '/tweets/search/:category_name' do
-  # TwitterApi.oauth_second_try()
-  # client = Oauthclient.new(
-  # consumer_key: ENV['CONSUMER_KEY'],
-  # consumer_secret: ENV['CONSUMER_SECRET'],
-  # token: ENV['ACCESS_TOKEN'],
-  # token_secret: ENV['ACCESS_TOKEN_SECRET'])
-  content_type :json
-  TwitterApi.get("https://api.twitter.com/1.1/statuses/user_timeline.json?count=3&screen_name=devbootcamp")
-  # client = TwitterApi.get("https://api.twitter.com/1.1/statuses/user_timeline.json?count=1&screen_name=devbootcamp")
-  # client = TwitterApi.set_client
-  # TwitterApi.search_category(client, params[:category_name])
+
+
+  @twitter_users = TwitterApi.search_category(params[:category_name])
+
+
+  erb :index
 end
 
 

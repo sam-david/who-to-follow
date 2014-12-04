@@ -17,17 +17,18 @@
       <% @twitter_users.each do |user| %>
       <div class="row">
         <div class="large-3 medium-3 columns">
-          <img src="<%= user.image_url %>" class="profile-image">
+          <img src="<%= user[:image_url] %>" class="profile-image">
         </div>
         <div class="large-3 medium-3 columns">
-          <h4 class="twitter-info-text"><%= user.username %></h4>
-          <h4 class="twitter-info-text"><%= user.handle %></h4>
+          <a href="https://twitter.com/<%= user[:screen_name] %>"><h4 class="twitter-info-text"><%= user[:name] %></h4></a>
+          <h4 class="twitter-info-text"><%= user[:screen_name] %></h4>
         </div>
         <div class="large-3 medium-3 columns">
-          <h4 class="twitter-info-text"><%= user.followers_count %></h4>
+          <h4 class="twitter-info-text"><%= user[:followers_count] %></h4>
+          <h4 class="twitter-info-text"><%= user[:following_count] %></h4>
         </div>
         <div class="large-3 medium-3 columns">
-          <h4 class="twitter-info-text"><%= user.statuses_count %></h4>
+          <h4 class="twitter-info-text"><%= user[:statuses_count] %></h4>
         </div>
       </div>
       <% end %>
