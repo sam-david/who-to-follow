@@ -97,12 +97,14 @@ module TwitterApi
     parsed_tweet = JSON.parse(response.body)
     all_users = []
     parsed_tweet["statuses"].each_with_index do |tweet, index|
+      p tweet
       user_hash = {}
       user_hash[:name] = tweet["user"]["name"]
       user_hash[:screen_name] = tweet["user"]["screen_name"]
       user_hash[:followers_count] = tweet["user"]["followers_count"]
       user_hash[:following_count] = tweet["user"]["friends_count"]
       user_hash[:statuses_count] = tweet["user"]["statuses_count"]
+      user_hash[:follow_ratio] = (user_hash[:followers_count].to_f / user_hash[:following_count].to_f).round(2)
       user_hash[:message] = tweet["text"]
       hashtags = []
       tweet["entities"]["hashtags"].each do |hashtag|
@@ -111,6 +113,7 @@ module TwitterApi
       user_hash[:hashtags] = hashtags.join(' ')
       user_hash[:type] = tweet["metadata"]["result_type"]
       user_hash[:image_url] = tweet["user"]["profile_image_url"]
+
       all_users << user_hash
       p index + 1
     end
@@ -120,7 +123,16 @@ module TwitterApi
   def self.filter_top_users(all_users)
     index = all_users.length * 0.70
     sorted_users = all_users.sort_by { |user| user[:followers_count] }
-    return sorted_users[index..all_users.length].reverse
+    return top_users = sorted_users[index..all_users.length].reverse
+  end
+
+  def self.save_users_to_database(top_users, category_name)
+    top_users.each do |user|
+    current_user = User.create(name: user[:name], screen_name: user[:screen_name], image_url: user[:image_url], followers: user[:followers_count], following: user[:following_count], statuses_count: user[:statuses_count])
+    category = Category.where(name: category_name).first
+    p category
+    Tweet.create(message: user[:message], hashtags: user[:hashtags], user_id: current_user.id, category_id: category.id)
+    end
   end
 
   def self.oauth_header(request, credentials)

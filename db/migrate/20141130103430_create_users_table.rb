@@ -3,6 +3,7 @@ class CreateUsersTable < ActiveRecord::Migration
     create_table :users do |t|
       t.string :name
       t.string :screen_name
+      t.string :image_url
       t.integer :followers
       t.integer :following
       t.integer :statuses_count

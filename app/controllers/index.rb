@@ -6,9 +6,8 @@ end
 
 get '/tweets/search/:category_name' do
 
-
-  @twitter_users = TwitterApi.search_category(params[:category_name])
-
+  top_users = TwitterApi.search_category(params[:category_name])
+  TwitterApi.save_users_to_database(top_users, params[:category_name])
 
   erb :index
 end

@@ -12,7 +12,7 @@ Red: #C72702;
 */
 
 body {
-
+  background-color: lightblue;
 }
 
 header {
@@ -67,30 +67,44 @@ nav:after, nav:before {
 
 .purple {
   background-color: #65286B;
+  background-color: #5786c1;
 }
 
 .blue {
   background-color: #0068E8;
+  background-color: #5786c1;
 }
 
 .green {
   background-color: #58AD17;
+  background-color: #5786c1;
 }
 
 .yellow {
   background-color: #FFD014;
+  background-color: #5786c1;
 }
 
 .orange {
   background-color: #FF8D00;
+  background-color: #5786c1;
 }
 
 .red {
   background-color: #C72702;
+  background-color: #5786c1;
+ /* box-shadow: 1px 0px #3a587f, 0px 1px #4171ae,
+              2px 1px #3a587f, 1px 2px #4171ae,
+              3px 2px #3a587f, 2px 3px #4171ae,
+              4px 3px #3a587f, 3px 4px #4171ae,
+              5px 4px #3a587f, 4px 5px #4171ae,
+              6px 5px #3a587f, 5px 6px #4171ae;
+  margin: 10px;*/
 }
 
 .grey {
   background-color: #6E7476;
+  background-color: #5786c1;
 }
 
 .suggestion-heading {
@@ -98,7 +112,36 @@ nav:after, nav:before {
   font-family: 'Orbitron', sans-serif;
 }
 
+.margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-image {
+  border: solid black 1px;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
 .twitter-info-text {
-  font-size: 1em;
+  font-size: .8em;
   text-align: center;
 }
+
+.twitter-name-text {
+  font-size: 1em;
+  text-align: center;
+
+}
+
+.user-banner {
+  background-image: url("http://pbs.twimg.com/profile_background_images/479400855842455552/suMY4UI7.jpeg");
+}
+
+.user-box {
+  border: solid black 2px;
+  padding: 1%;
+  /*background-image: url("http://pbs.twimg.com/profile_background_images/479400855842455552/suMY4UI7.jpeg");
+  opacity: .3;*/
+}
+
