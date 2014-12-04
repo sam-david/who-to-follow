@@ -20,6 +20,10 @@ header {
   border: solid white 2px;
 }
 
+/*.container {
+  border: solid black 2px;
+}*/
+
 .page-title {
   text-align: center;
   font-family: 'Orbitron', sans-serif;

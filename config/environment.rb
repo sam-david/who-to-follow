@@ -30,6 +30,11 @@ require 'twitter'
 require 'dotenv'
 Dotenv.load
 
+require 'net/http'
+require 'simple_oauth'
+require 'json'
+# require 'oauth'
+
 require 'erb'
 
 # Some helper constants for path-centric logic

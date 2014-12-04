@@ -22,6 +22,10 @@ gem 'rspec'
 gem 'dotenv'
 gem 'twitter'
 
+gem 'simple_oauth' , '~> 0.2.0'
+gem 'json'
+# gem 'oauth'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
