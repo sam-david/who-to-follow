@@ -86,6 +86,9 @@ header {
   display: none;
 }
 
+.bold {
+  font-weight: bold;
+}
 
 .custom-input {
   margin-top: 20px;
@@ -96,8 +99,20 @@ header {
   padding-top: 15px;
 }
 
+.light-grey {
+  color: #6E7476;
+}
+
 .submit {
   text-align: center;
+
+}
+
+.submit-button {
+  background-color: #6E7476;
+  border: solid white 2px;
+  width: 115px;
+  height: 30px;
 }
 
 .label {
@@ -131,9 +146,10 @@ header {
 }
 
 .profile-image {
-  border: solid black 1px;
+  border: solid black 3px;
   border-radius: 3px;
-  margin-top: 6px;
+  margin-top: 12px;
+  margin-left: 10px;
 }
 
 .twitter-info-text {

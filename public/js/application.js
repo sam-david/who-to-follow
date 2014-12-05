@@ -79,19 +79,19 @@ function renderUser(user) {
   html += "<div class='margin'>";
   html +=  "<div class='row user-box' style='border-color:#" + user.link_color + ";'>";
   html +=    "<div class='large-3 medium-3 columns'>";
-  html +=       "<img src=" + user.image_url + " class='profile-image'>";
+  html +=       "<img src=" + user.image_url + " class='profile-image' style='border-color:#" + user.link_color + ";'>";
   html +=     "</div>";
   html +=     "<div class='large-3 medium-3 columns'>";
-  html +=       "<a href='https://twitter.com/" + user.screen_name + "'><h4 class='user-name-text'" + user.link_color + ">" + user.name + "</h4></a>";
-  html +=       "<h4 class='twitter-info-text'>@" + user.screen_name + "</h4>";
+  html +=       "<a href='https://twitter.com/" + user.screen_name + "' target='_blank'><h4 class='user-name-text'" + user.link_color + ">" + user.name + "</h4></a>";
+  html +=       "<h4 class='twitter-info-text light-grey'>@" + user.screen_name + "</h4>";
   html +=      "</div>";
   html +=      "<div class='large-3 medium-3 columns'>";
-  html +=        "<h4 class='twitter-info-text'>Followers: " + user.followers + "</h4>";
-  html +=        "<h4 class='twitter-info-text'>Following: " + user.following + "</h4>";
-  html +=        "<h4 class='twitter-info-text'>Ratio: " + (user.followers / user.following).toFixed(2) + "</h4>"
+  html +=        "<h4 class='twitter-info-text'>Followers: <span class='bold'>" + user.followers + "</span></h4>";
+  html +=        "<h4 class='twitter-info-text'>Following: <span class='bold'>" + user.following + "</span></h4>";
+  html +=        "<h4 class='twitter-info-text'>Ratio: <span class='bold'>" + (user.followers / user.following).toFixed(2) + "</span></h4>"
   html +=       "</div>"
   html +=       "<div class='large-3 medium-3 columns'>"
-  html +=         "<h4 class='twitter-info-text'>Total Tweets: " + user.statuses_count + "</h4>"
+  html +=         "<h4 class='twitter-info-text'>Total Tweets:  <span class='bold'> " + user.statuses_count + "</span></h4>"
   html +=       "</div>"
   html +=   "</div>"
   html +=  "</div>"
