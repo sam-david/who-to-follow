@@ -123,7 +123,7 @@ module TwitterApi
       filter_top_users(all_users)
     else
       p "custom"
-      p all_users
+      all_users.uniq
     end
   end
 
