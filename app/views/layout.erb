@@ -2,132 +2,234 @@
 <html lang="en">
 <head>
 
-  <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700|Roboto:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400,700,800|Hammersmith+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/button.css">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <script src="/js/foundation.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
 <body>
+<div class="row">
+<div class="top-buffer"></div>
+</div>
+<div class="fixed">
+  <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/" class="top-bar-heading">#WhoToFollow</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href=""><span>Login</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="">Login</a></li>
+    </ul>
+
+    <!-- Left Nav Section -->
+   <!--  <ul class="left">
+      <li><a href="#">Left Nav Button</a></li>
+    </ul> -->
+  </section>
+</nav>
+</div>
+
   <header class="row">
     <div class="large-12 medium-12 columns">
-      <h1 class="page-title">#WHO TO FOLLOW</h1>
+      <img src="/images/who-to-follow-header.png" class="header-image"/>
     </div>
   </header>
   <nav>
     <div class="row">
-      <div class="large-2 medium-2 columns nav-button purple">
-        <a class="">Technology</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button blue">
-        <a class="">Music</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button green">
-        <a class="">Sports</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button yellow">
-        <a class="">Photography</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button orange">
-        <a class="">Entertainment</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button red">
-        <a class="">News</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-2 medium-2 columns nav-button blue">
-        <a class="">Fashion</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button green">
-        <a class="">Food/Drink</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button yellow">
-        <a class="">Television</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button orange">
-        <a class="">Movies</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button red">
-        <a class="">Family</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button purple">
-        <a class="">Art/Design</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-2 medium-2 columns nav-button green">
-        <a class="">Business</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button yellow">
-        <a class="">Finance</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button orange">
-        <a class="">Health</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button red">
-        <a class="">Books</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button purple">
-        <a class="">Science</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button blue">
-        <a class="">Faith</a>
-      </div>
-    </div>
-    <div class="row">
-      <a class="">
-        <div class="large-2 medium-2 columns nav-button yellow">
-        Government
+      <a href="/tweets/search/tech" class="category-link">
+        <div class="large-2 medium-2 columns  nav-button link-text">
+          Technology
         </div>
       </a>
-      <div class="large-2 medium-2 columns nav-button orange">
-        <a class="">Social Good</a>
+      <a href="/tweets/search/music" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Music
+        </div>
+      </a>
+      <a href="/tweets/search/sports" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Sports
+        </div>
+      </a>
+      <a href="/tweets/search/photo" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Photography
+        </div>
+      </a>
+      <a href="/tweets/search/entertainment" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Entertainment
+        </div>
+      </a>
+      <a href="/tweets/search/news" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          News
+        </div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/tweets/search/fashion" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Fashion
+        </div>
+      </a>
+      <a href="/tweets/search/food" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Food/Drink
+        </div>
+      </a>
+      <a href="/tweets/search/television" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Television
+        </div>
+      </a>
+      <a href="/tweets/search/movies" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Movies
       </div>
-      <div class="large-2 medium-2 columns nav-button red">
-        <a class="">Other</a>
+      </a>
+      <a href="/tweets/search/family" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Family
       </div>
-      <div class="large-2 medium-2 columns nav-button purple">
-        <a class="">Travel</a>
+      </a>
+      <a href="/tweets/search/art" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Art/Design
       </div>
-      <div class="large-2 medium-2 columns nav-button blue">
-        <a class="">Gaming</a>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/tweets/search/business" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Business
       </div>
-      <div class="large-2 medium-2 columns nav-button green">
-        <a class="">Other</a>
+      </a>
+      <a href="/tweets/search/finance" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Finance
+      </div>
+      </a>
+      <a href="/tweets/search/health" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Health
+      </div>
+      </a>
+      <a href="/tweets/search/books" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Books
+      </div>
+      </a>
+      <a href="/tweets/search/science" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Science
+      </div>
+      </a>
+      <a href="/tweets/search/faith" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Faith
+      </div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/tweets/search/government" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Government
+        </div>
+      </a>
+      <a href="/tweets/search/social_good" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+        Social Good
+        </div>
+      </a>
+      <a href="/tweets/search/other" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Other
+        </div>
+      </a>
+      <a href="/tweets/search/travel" class="category-link">
+      <div class="large-2 medium-2 columns nav-button link-text">
+        Travel
+      </div>
+      </a>
+      <a href="/tweets/search/gaming" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Gaming
+        </div>
+      </a>
+      <a href="/tweets/search/tech" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          Other
+        </div>
+      </a>
+    </div>
+    <div class="row">
+      <a href="/tweets/search/nba" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          NBA
+        </div>
+      </a>
+      <a href="/tweets/search/nfl" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          NFL
+        </div>
+      </a>
+      <a href="/tweets/search/mlb" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          MLB
+        </div>
+      </a>
+      <a href="/tweets/search/nascar" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          NASCAR
+        </div>
+      </a>
+      <a href="/tweets/search/nhl" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          NHL
+        </div>
+      </a>
+      <a href="/tweets/search/tech" class="category-link">
+        <div class="large-2 medium-2 columns nav-button link-text">
+          PGA
+        </div>
+      </a>
+    </div>
+    <div class="row">
+      <div class="large-12 medium-12 columns grey link-text">
+        <p class="custom-link">Custom</p>
       </div>
     </div>
     <div class="row">
-      <div class="large-2 medium-2 columns nav-button orange">
-        <a class="">NBA</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button red">
-        <a class="">NFL</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button purple">
-        <a class="">MLB</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button blue">
-        <a class="">NASCAR</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button green">
-        <a class="">NHL</a>
-      </div>
-      <div class="large-2 medium-2 columns nav-button yellow">
-        <a class="">PGA</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-12 medium-12 columns nav-button grey">
-        <a class="">Custom</a>
+      <div class="large-12 medium-12 columns custom-form">
+        <form id="custom-hashtags" method="post" action="/sessions">
+          <label class="label" for="email">Hashtags</label>
+
+          <input type="text" name="hashtags" class="custom-input" placeholder="ex: #hastags!, #doge, #verywow">
+          <div class="submit"><input type="submit" value="Search"></div>
+        </form>
       </div>
     </div>
   </nav>
   <%= yield %>
+  <!-- <footer>
+    <div class="large-12 columns footer-div">
+      <h4 class="footer-text">Sam David</h4>
+    </div>
+  </footer> -->
 </body>
 </html>

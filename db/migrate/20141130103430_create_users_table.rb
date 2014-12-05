@@ -1,10 +1,13 @@
 class CreateUsersTable < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.string :username
+      t.string :name
+      t.string :screen_name
+      t.string :image_url
+      t.string :link_color
       t.integer :followers
-      t.integer :statuses
-
+      t.integer :following
+      t.integer :statuses_count
 
       t.timestamp
     end

@@ -14,8 +14,18 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
+gem 'pry'
 
 gem 'shotgun'
+
+gem 'rspec'
+
+gem 'dotenv'
+gem 'twitter'
+
+gem 'simple_oauth' , '~> 0.2.0'
+gem 'json'
+# gem 'oauth'
 
 group :test do
   gem 'shoulda-matchers'
@@ -23,7 +33,6 @@ group :test do
 end
 
 group :test, :development do
-  gem 'rspec'
   gem 'factory_girl'
   gem 'faker'
 end
