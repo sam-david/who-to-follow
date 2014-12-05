@@ -5,12 +5,28 @@ get '/' do
 end
 
 get '/tweets/search/:category_name' do
-
-  top_users = TwitterApi.search_category(params[:category_name])
-  TwitterApi.save_users_to_database(top_users, params[:category_name])
+  session[:current_category] = params[:category_name]
   category = Category.where(name: params[:category_name]).first
-  @twitter_users = User.includes(:categories).where(category_id: category.id)
-  erb :index
+  content_type :JSON
+  if category == nil
+    #custom stuff here
+    twitter_users = TwitterApi.search_category(params[:hashtags])
+    twitter_users.to_json
+  else
+    if request.xhr?
+      top_users = TwitterApi.search_category(params[:category_name])
+      TwitterApi.save_users_to_database(top_users, params[:category_name])
+      category = Category.where(name: params[:category_name]).first
+      twitter_users = category.users.order('followers DESC').limit(10)
+      twitter_users.to_json
+    else
+      top_users = TwitterApi.search_category(params[:category_name])
+      TwitterApi.save_users_to_database(top_users, params[:category_name])
+      category = Category.where(name: params[:category_name]).first
+      @twitter_users = category.users.order('followers DESC').limit(10)
+      erb :index
+    end
+  end
 end
 
 

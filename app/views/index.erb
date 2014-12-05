@@ -5,36 +5,36 @@
     </div>
   </div>
   <div class="row">
-    <div class="large-2 medium-2 columns"></div>
-    <div class="large-8 medium-8 columns">
-      <h3 class="suggestion-heading">Welcome to Who To Follow. Pick a category to see suggestions on Twitter users to follow.</h3>
+    <div class="large-12 medium-12 columns">
+      <h3 class="welcome-heading">Welcome to #WhoToFollow. Pick a category to see suggestions for Twitter users to follow</h3>
     </div>
-    <div class="large-2 medium-2 columns"></div>
   </div>
 
   <div class="row">
     <div class="large-8 medium-8 small-centered columns">
-      <% @twitter_users.each do |user| %>
-      <div class="margin">
-      <div class="row user-box">
-        <div class="large-3 medium-3 columns">
-          <img src="<%= user[:image_url] %>" class="profile-image">
-        </div>
-        <div class="large-3 medium-3 columns">
-          <a href="https://twitter.com/<%= user[:screen_name] %>"><h4 class="twitter-name-text"><%= user[:name] %></h4></a>
-          <h4 class="twitter-info-text">@<%= user[:screen_name] %></h4>
-        </div>
-        <div class="large-3 medium-3 columns">
-          <h4 class="twitter-info-text">Followers: <%= user[:followers_count] %></h4>
-          <h4 class="twitter-info-text">Following: <%= user[:following_count] %></h4>
-          <h4 class="twitter-info-text">Ratio: <%= user[:follow_ratio] %></h4>
-        </div>
-        <div class="large-3 medium-3 columns">
-          <h4 class="twitter-info-text">Total Tweets: <%= user[:statuses_count] %></h4>
+      <div class="user-list">
+        <% @twitter_users.each do |user| %>
+        <div class="margin">
+        <div class="row user-box">
+          <div class="large-3 medium-3 columns">
+            <img src="<%= user[:image_url] %>" class="profile-image">
+          </div>
+          <div class="large-3 medium-3 columns">
+            <a href="https://twitter.com/<%= user[:screen_name] %>"><h4 class="twitter-name-text"><%= user[:name] %></h4></a>
+            <h4 class="twitter-info-text">@<%= user[:screen_name] %></h4>
+          </div>
+          <div class="large-3 medium-3 columns">
+            <h4 class="twitter-info-text">Followers: <%= user[:followers] %></h4>
+            <h4 class="twitter-info-text">Following: <%= user[:following] %></h4>
+            <h4 class="twitter-info-text">Ratio: <%= (user[:followers].to_f / user[:following].to_f).round(2) %></h4>
+          </div>
+          <div class="large-3 medium-3 columns">
+            <h4 class="twitter-info-text">Total Tweets: <%= user[:statuses_count] %></h4>
+          </div>
         </div>
       </div>
-    </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
